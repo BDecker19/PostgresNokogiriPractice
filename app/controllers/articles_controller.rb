@@ -14,10 +14,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    #Use this instead of Article.all
-    #like select * from articles limit 30
-    
-  
+    @articles = Article.find(:all, :order => "id", :limit => 5)
   end
   
 end
