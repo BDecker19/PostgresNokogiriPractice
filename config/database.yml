@@ -3,7 +3,7 @@ development:
   encoding: unicode 
   database: pg_practice_development
   pool: 5
-  username: keithjohnson
+  username: Ben
   password:
   host: localhost
 
@@ -30,7 +30,7 @@ test: &test
   encoding: unicode
   database: pg_practice_test
   pool: 5
-  username: keithjohnson
+  username: Ben
   password:
   host: localhost
 
@@ -39,7 +39,7 @@ production:
   encoding: unicode
   database: pg_practice_production
   pool: 5
-  username: keithjohnson  
+  username: Ben  
   password:
   host: localhost
 

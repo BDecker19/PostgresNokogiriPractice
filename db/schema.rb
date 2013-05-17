@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130516191528) do
+ActiveRecord::Schema.define(:version => 20130517195103) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -20,24 +20,17 @@ ActiveRecord::Schema.define(:version => 20130516191528) do
     t.text     "body"
   end
 
+  add_index "articles", ["id"], :name => "index_articles_on_id"
   add_index "articles", ["title"], :name => "index_articles_on_title"
-
-  create_table "fruits", :force => true do |t|
-    t.string   "name"
-    t.boolean  "prickly"
-    t.integer  "calories"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "tracks", :force => true do |t|
     t.string   "title"
     t.string   "track_file"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-    t.string   "artist"
     t.string   "wrong_answer_1"
     t.string   "wrong_answer_2"
+    t.string   "artist"
   end
 
   create_table "users", :force => true do |t|

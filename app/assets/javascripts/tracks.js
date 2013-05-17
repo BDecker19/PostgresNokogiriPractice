@@ -5,12 +5,13 @@ $(document).ready(function() {
 		console.log("Play");
 		soundManager.play('mySound');
 		$(this).toggle();
-		$("#stop-button").toggle();
+		$("#pause-button").toggle();
 		// 'mySound' makes it point to your soundManager code, inside the <script> tags in the show page.
 	});
-	$('#stop-button').click(function() {
-		console.log("stop");
+	$('#pause-button').click(function() {
+		console.log("play");
 		$(this).toggle();
-		soundManager.stop('mySound');
+		$("#play-button").toggle();
+		soundManager.pause('mySound');
 	});
 });

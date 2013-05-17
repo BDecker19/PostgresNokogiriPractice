@@ -32,14 +32,13 @@ class TrackUploader < CarrierWave::Uploader::Base
    process :guess_track
 
   def guess_track
-    result = JSON.parse("echoprint-codegen #{path}")
+    result = JSON.parse(`echoprint-codegen #{path}`)
     model.title = result.first["metadata"]["title"]
     model.artist = result.first["metadata"]["artist"]
 
 
     # right_artist = Echonest::Artist.new('I2PXRGNCAGFXZ2PUS',model.artist)
     url = "http://developer.echonest.com/api/v4/artist/similar?api_key=I2PXRGNCAGFXZ2PUS"
-    binding.pry
   end
 
   #

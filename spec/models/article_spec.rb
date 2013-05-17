@@ -8,7 +8,7 @@ describe 'The Article parser' do
 		dummy_text = "<page><title>#{@article.title}</title><text>#{@articles.body}</text></page>"
 
 		document = WikiImport.new(Rails.logger)
-		parser = Nokogiri::XML::SAX::Parser.new(document
+		parser = Nokogiri::XML::SAX::Parser.new(document)
 		
 
 		@document = double("WikiImport")
