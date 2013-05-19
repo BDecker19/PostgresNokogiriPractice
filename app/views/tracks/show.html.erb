@@ -24,25 +24,6 @@
 <!-- This replaces the audio player that is in the index for reference -->
 <p> <strong>Audio Playback</strong></p>
 
-<script>
-	soundManager.setup({
-		url: '/swf/',
-flashVersion: 9,
-onready: function() {
-soundManager.createSound({
-  id: 'mySound',
-  url: '<%= @track.track_file.url %>',
-  autoLoad: true,
-  autoPlay: false,
-  onload: function() {
-    alert('The sound '+this.id+' loaded!');
-  },
-volume: 50
-	});
-}
-});
-</script>
-
 <!--  Keith version...
 	<script>
 	soundManager.setup({
